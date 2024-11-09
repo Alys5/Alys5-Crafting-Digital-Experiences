@@ -2,16 +2,25 @@
 
 > Crafting intuitive digital experiences through UX/UI Design and Front-end Development
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Version](https://img.shields.io/badge/version-0.0.0-blue)
 ![License](https://img.shields.io/badge/license-CC0%201.0-green)
 ![Framework](https://img.shields.io/badge/framework-Vue.js%203-brightgreen)
+![Styling](https://img.shields.io/badge/styling-Tailwind%20CSS-38bdf8)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black)
 
 ## 🎯 Overview
 
 Professional portfolio showcasing expertise in UX/UI Design and Front-end Development. Built with Vue.js 3 and Tailwind CSS, this site demonstrates modern web development practices and design principles.
 
+---
+
+![Alys_5 Logo](src/asset/logo.svg)
+
+---
+
 ## 🚀 Quick Start
+
+### Project Setup
 
 ```bash
 # Clone repository
@@ -23,11 +32,32 @@ cd Alys5-Portfolio
 # Install dependencies
 npm install
 
+# Format code
+npm run format
+
 # Start development server
 npm run dev
 ```
 
 Your local instance will be available at `http://localhost:3000` ✨
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Lint the Code
+
+```bash
+npm run lint
+```
 
 ## 💫 Features
 
@@ -41,17 +71,18 @@ Your local instance will be available at `http://localhost:3000` ✨
 
 ## 🛠️ Technology Stack
 
-```javascript
+```json
 {
   "frontend": {
     "framework": "Vue.js 3",
     "styling": "Tailwind CSS",
     "stateManagement": "Pinia",
-    "buildTool": "Vite"
+    "buildTool": "Vite",
+    "router": "vue-router"
   },
   "deployment": "Vercel",
   "performance": {
-    "imageOptimization": "next/image",
+    "imageOptimization": "simple-git",
     "caching": "Vercel Edge Cache",
     "analytics": "Vercel Analytics"
   }
@@ -107,41 +138,3 @@ If you find this project helpful, consider supporting its development:
 ---
 
 Made with ♥️ by [Alice Mandelli](https://alys5.eu)
-
----
-
-# Alys5-Portfolio
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
