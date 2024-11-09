@@ -1,4 +1,5 @@
 # Alys5 | Crafting Digital Experiences 🎨
+
 UX/UI Design • Front-End Development • Digital Innovation
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -7,58 +8,58 @@ UX/UI Design • Front-End Development • Digital Innovation
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black)
 
-My professional portfolio website showcasing a decade of experience in UX/UI Design and Front-end Development. Built with Vue.js and Vuetify, this site demonstrates my approach to creating intuitive and engaging digital experiences.
+Benvenuti nel mio portfolio professionale, progettato per mostrare un decennio di esperienza in UX/UI Design e sviluppo front-end. Costruito con Vue.js e Vuetify, questo sito rappresenta il mio approccio alla creazione di esperienze digitali intuitive e coinvolgenti.
 
 ## ✨ Features
 
-- 🎯 Responsive design optimized for all devices
-- 🌓 Light/Dark theme support
-- 📱 Mobile-first approach
-- ⚡ Optimized performance with Vercel Edge Network
-- 🎮 Interactive UI components
-- 📊 Project case studies
-- 🔍 SEO optimized
+- 🎯 Design responsivo ottimizzato per tutti i dispositivi
+- 🌓 Supporto tema Chiaro/Scuro
+- 📱 Approccio mobile-first
+- ⚡ Prestazioni ottimizzate con Vercel Edge Network
+- 🎮 Componenti UI interattivi
+- 📊 Case studies dei progetti
+- 🔍 SEO ottimizzato
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Prerequisiti
 
-- Node.js (v16 or higher)
-- npm or yarn
-- Vercel CLI (optional for local development)
+- Node.js (v16 o superiore)
+- npm o yarn
+- Vercel CLI (opzionale per sviluppo locale)
 
-### Installation
+### Installazione
 
 ```bash
-# Clone the repository
-git clone https://github.com/alys5/portfolio.git
+# Clona il repository
+git clone https://github.com/Alys5/Alys5-Portfolio.git
 
-# Navigate to project directory
-cd portfolio
+# Accedi alla directory del progetto
+cd Alys5-Portfolio
 
-# Install dependencies
+# Installa le dipendenze
 npm install
-# or
+# o
 yarn install
 
-# Install Vercel CLI (optional)
+# Installa Vercel CLI (opzionale)
 npm i -g vercel
 
-# Start development server
+# Avvia il server di sviluppo
 npm run dev
-# or
+# o
 yarn dev
 ```
 
-### Building for Production
+### Compilare per la Produzione
 
 ```bash
-# Build for production
+# Compila per la produzione
 npm run build
-# or
+# o
 yarn build
 
-# Preview production build locally using Vercel CLI
+# Anteprima della build di produzione con Vercel CLI
 vercel dev
 ```
 
@@ -69,50 +70,49 @@ vercel dev
 - **State Management:** Pinia
 - **Router:** Vue Router
 - **Styling:** SCSS/CSS
-- **Animation:** GSAP
-- **Testing:** Vitest
+- **Animazione:** GSAP
+- **Testing:** Vitest e Cypress
 - **Deployment:** Vercel
 - **Analytics:** Vercel Analytics
 
 ## 📁 Project Structure
 
 ```
-src/
-├── assets/          # Static assets (images, fonts, etc.)
-├── components/      # Reusable Vue components
-├── layouts/         # Layout components
-├── pages/          # Page components
-├── router/         # Vue router configuration
-├── store/          # Pinia store modules
-├── styles/         # Global styles and variables
-├── utils/          # Utility functions
-└── App.vue         # Root component
+src/                              # Codice sorgente dell'applicazione
+├── assets/                       # Risorse come immagini e stili
+├── components/                   # Componenti riutilizzabili dell'interfaccia utente
+├── router/                       # Definisce le rotte dell'applicazione
+├── services/                     # Moduli per le chiamate API e la gestione dei dati
+├── store/                        # Gestione dello stato globale (es. Vuex per Vue.js)
+├── styles/                       # Stili globali e file CSS/Sass
+├── utils/                        # Funzioni e helper riutilizzabili
+├── views/                        # Viste principali (ogni file rappresenta una pagina dell'app)
+├── App.vue                       # Componente root dell'applicazione Vue
+└── main.js                       # File di ingresso dell'applicazione Vue
 ```
 
-## 🔧 Configuration
+## 🔧 Configurazione
 
-### Environment Variables
+### Variabili di Ambiente
 
-Create a `.env` file in the root directory:
+Crea un file `.env` nella directory principale:
 
 ```env
 VITE_APP_TITLE=Alys5 | Crafting Digital Experiences
 VITE_API_BASE_URL=your-api-url
 ```
 
-For Vercel deployment, configure these in your project settings on Vercel Dashboard.
+### Configurazione di Build
 
-### Build Configuration
-
-- `vite.config.js` - Build configuration
-- `vuetify.config.js` - Vuetify theme and plugin settings
-- `vercel.json` - Vercel deployment configuration
+- `vite.config.js` - Configurazione di build
+- `vuetify.config.js` - Impostazioni tema e plugin Vuetify
+- `vercel.json` - Configurazione per il deployment su Vercel
 
 ## 🌐 Deployment
 
-This site is automatically deployed through Vercel on push to the main branch.
+Questo sito è automaticamente distribuito tramite Vercel al push sul ramo `main`.
 
-### Deployment Configuration
+### Configurazione per il Deployment
 
 ```json
 // vercel.json
@@ -137,57 +137,83 @@ This site is automatically deployed through Vercel on push to the main branch.
 }
 ```
 
-### Deployment Commands
+### Comandi per il Deployment
 
 ```bash
-# Deploy to Vercel
+# Distribuisci su Vercel
 vercel
 
-# Deploy to production
+# Distribuisci in produzione
 vercel --prod
 ```
 
 ## 🧪 Testing
 
 ```bash
-# Run unit tests
+# Esegui test unitari
 npm run test
-# or
+# o
 yarn test
 
-# Run e2e tests
+# Esegui test e2e
 npm run test:e2e
-# or
+# o
 yarn test:e2e
 ```
 
+## 📚 Struttura dei Rami
+
+### Ramo Principale
+
+- **main**: Ramo stabile che riflette sempre la versione rilasciata del sito.
+
+### Rami di Sviluppo
+
+- **develop**: Punto di partenza per tutte le nuove funzionalità e correzioni di bug. Lo sviluppo attivo avviene in questo ramo.
+
+### Rami di Funzionalità (feature/\*)
+
+- **feature/ux-ui-redesign**: Per modifiche significative all'interfaccia utente.
+- **feature/e-commerce**: Per l'implementazione di un negozio online.
+- **feature/nuovo-modulo**: Per l'aggiunta di un nuovo modulo al sito.
+
+### Rami di Correzione Bug (bugfix/\*)
+
+- **bugfix/problema-login**: Per la correzione di un bug specifico legato al login.
+- **bugfix/errore-visualizzazione**: Per risolvere problemi di visualizzazione.
+
+### Come Utilizzare Questa Struttura
+
+1. **Inizia sempre da `develop`**: Crea un nuovo ramo da `develop` per ogni nuova funzionalità o bugfix.
+2. **Isola le modifiche**: Ogni ramo deve contenere solo le modifiche specifiche alla funzionalità o al bug.
+3. **Crea pull request**: Una volta completato il lavoro in un ramo, crea una pull request verso `develop` per una revisione.
+4. **Fusione in `develop`**: Dopo l'approvazione, fondi il tuo ramo in `develop`.
+5. **Aggiorna `main`**: Periodicamente, crea un ramo di rilascio basato su `develop` e fondilo in `main` per rilasciare una nuova versione.
+
+### Vantaggi
+
+- **Organizzazione**: La struttura dei rami semplifica la gestione e comprensione del codice.
+- **Flessibilità**: Permette di lavorare su più funzionalità contemporaneamente senza conflitti.
+- **Tracciabilità**: Facilita la verifica dello stato di ogni funzionalità e della cronologia delle modifiche.
+- **Collaborazione**: Simula un ambiente collaborativo anche per un progetto individuale.
+
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Distribuito sotto la licenza MIT. Per i dettagli, consulta il file [LICENSE](LICENSE).
 
-## 👩‍💻 About Me
+## 👩‍💻 Su di Me
 
-I'm Alice Mandelli, a UX/UI Designer and Front-end Developer with over 10 years of experience in creating digital experiences. Winner of the Nielsen Norman Intranet Design Annual Award 2021, I specialize in creating intuitive interfaces that bridge aesthetics and functionality.
+Sono Alice Mandelli, una UX/UI Designer e Front-end Developer con oltre 10 anni di esperienza nel creare esperienze digitali uniche. Vincitrice del Nielsen Norman Intranet Design Annual Award 2021, mi dedico a creare interfacce intuitive che combinano estetica e funzionalità.
 
-### 🔗 Connect with Me
+### 🔗 Connettiti con Me
 
 - Portfolio: [alys5.eu](https://alys5.eu)
 - LinkedIn: [linkedin.com/in/alys5](https://linkedin.com/in/alys5)
 - Fiverr: [fiverr.com/alys_5](https://fiverr.com/alys_5)
 
-## 🤝 Contributing
-
-While this is a personal portfolio site, I welcome feedback and suggestions! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 🙏 Acknowledgments
 
-- Icons by [Lucide Icons](https://lucide.dev)
-- Animations powered by [GSAP](https://greensock.com/gsap)
-- Deployed with [Vercel](https://vercel.com)
-- Analytics by [Vercel Analytics](https://vercel.com/analytics)
+- Icone da [Lucide Icons](https://lucide.dev)
+- Animazioni con [GSAP](https://greensock.com/gsap)
+- Distribuito tramite [Vercel](https://vercel.com)
+- Analytics da [Vercel Analytics](https://vercel.com/analytics)
