@@ -3,7 +3,7 @@ export default {
   name: 'MaintenancePage',
   data() {
     return {
-      calendarLink: 'https://calendar.google.com/calendar/u/0/r',
+      calendarLink: 'https://calendar.app.google/ppakzD82jGkDSzWN7',
       linkedinLink: 'https://www.linkedin.com/in/alys5',
       githubLink: 'https://github.com/alys5',
       fiverrLink: 'https://www.fiverr.com/alys_5',
