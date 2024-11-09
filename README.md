@@ -3,217 +3,149 @@
 UX/UI Design • Front-End Development • Digital Innovation
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Vue Version](https://img.shields.io/badge/vue-3.x-brightgreen)
+![Vue](https://img.shields.io/badge/vue-3.x-brightgreen)
 ![Vuetify](https://img.shields.io/badge/vuetify-3.x-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-CC0%201.0-green)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black)
 
-Benvenuti nel mio portfolio professionale, progettato per mostrare un decennio di esperienza in UX/UI Design e sviluppo front-end. Costruito con Vue.js e Vuetify, questo sito rappresenta il mio approccio alla creazione di esperienze digitali intuitive e coinvolgenti.
+> My professional portfolio website showcasing a decade of experience in UX/UI Design and Front-end Development. Built with Vue.js and Vuetify, this site demonstrates my approach to creating intuitive and engaging digital experiences.
 
-## ✨ Features
-
-- 🎯 Design responsivo ottimizzato per tutti i dispositivi
-- 🌓 Supporto tema Chiaro/Scuro
-- 📱 Approccio mobile-first
-- ⚡ Prestazioni ottimizzate con Vercel Edge Network
-- 🎮 Componenti UI interattivi
-- 📊 Case studies dei progetti
-- 🔍 SEO ottimizzato
-
-## 🚀 Quick Start
-
-### Prerequisiti
-
-- Node.js (v16 o superiore)
-- npm o yarn
-- Vercel CLI (opzionale per sviluppo locale)
-
-### Installazione
+## 🚀 Quick Setup
 
 ```bash
-# Clona il repository
+# Clone and install dependencies
 git clone https://github.com/Alys5/Alys5-Portfolio.git
-
-# Accedi alla directory del progetto
 cd Alys5-Portfolio
-
-# Installa le dipendenze
 npm install
-# o
-yarn install
 
-# Installa Vercel CLI (opzionale)
-npm i -g vercel
-
-# Avvia il server di sviluppo
+# Launch development server
 npm run dev
-# o
-yarn dev
 ```
 
-### Compilare per la Produzione
+Visit `http://localhost:3000` to see your local instance ✨
 
-```bash
-# Compila per la produzione
-npm run build
-# o
-yarn build
+## 💫 Key Features
 
-# Anteprima della build di produzione con Vercel CLI
-vercel dev
-```
+- 🎯 Responsive design optimized for all devices
+- 🌓 Elegant Light/Dark theme implementation
+- 📱 Mobile-first approach
+- ⚡ Performance-optimized with Vercel Edge Network
+- 🎮 Interactive UI components with seamless transitions
+- 📊 Detailed project case studies
+- 🔍 SEO optimized architecture
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Vue.js 3
-- **UI Library:** Vuetify 3
-- **State Management:** Pinia
-- **Router:** Vue Router
-- **Styling:** SCSS/CSS
-- **Animazione:** GSAP
-- **Testing:** Vitest e Cypress
-- **Deployment:** Vercel
-- **Analytics:** Vercel Analytics
-
-## 📁 Project Structure
-
-```
-src/                              # Codice sorgente dell'applicazione
-├── assets/                       # Risorse come immagini e stili
-├── components/                   # Componenti riutilizzabili dell'interfaccia utente
-├── router/                       # Definisce le rotte dell'applicazione
-├── services/                     # Moduli per le chiamate API e la gestione dei dati
-├── store/                        # Gestione dello stato globale (es. Vuex per Vue.js)
-├── styles/                       # Stili globali e file CSS/Sass
-├── utils/                        # Funzioni e helper riutilizzabili
-├── views/                        # Viste principali (ogni file rappresenta una pagina dell'app)
-├── App.vue                       # Componente root dell'applicazione Vue
-└── main.js                       # File di ingresso dell'applicazione Vue
+```javascript
+const techStack = {
+  framework: "Vue.js 3",
+  ui: "Vuetify 3",
+  state: "Pinia",
+  styling: "SCSS",
+  animation: "GSAP",
+  testing: ["Vitest", "Cypress"],
+  deployment: "Vercel",
+  performance: "Edge-optimized"
+}
 ```
 
-## 🔧 Configurazione
+## 📁 Project Architecture
 
-### Variabili di Ambiente
+```
+src/
+├── assets/          # Static resources
+├── components/      # Reusable UI components
+├── plugins/         # Vue plugins configuration
+├── router/          # Navigation architecture
+├── services/        # API and data management
+├── store/          # Global state management
+├── styles/         # Global SCSS architecture
+├── utils/          # Utility functions
+├── views/          # Main view components
+└── App.vue         # Root component
+```
 
-Crea un file `.env` nella directory principale:
+## 🔧 Configuration
+
+1. Create your environment configuration:
 
 ```env
 VITE_APP_TITLE=Alys5 | Crafting Digital Experiences
 VITE_API_BASE_URL=your-api-url
 ```
 
-### Configurazione di Build
+2. Core configuration files:
 
-- `vite.config.js` - Configurazione di build
-- `vuetify.config.js` - Impostazioni tema e plugin Vuetify
-- `vercel.json` - Configurazione per il deployment su Vercel
+- `vite.config.js` - Build configuration
+- `vuetify.config.js` - Theme settings
+- `vercel.json` - Deployment configuration
 
-## 🌐 Deployment
-
-Questo sito è automaticamente distribuito tramite Vercel al push sul ramo `main`.
-
-### Configurazione per il Deployment
-
-```json
-// vercel.json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
-}
-```
-
-### Comandi per il Deployment
+## 🚀 Deployment
 
 ```bash
-# Distribuisci su Vercel
-vercel
+# Build for production
+npm run build
 
-# Distribuisci in produzione
+# Deploy to Vercel
 vercel --prod
 ```
 
 ## 🧪 Testing
 
 ```bash
-# Esegui test unitari
-npm run test
-# o
-yarn test
-
-# Esegui test e2e
-npm run test:e2e
-# o
-yarn test:e2e
+npm run test       # Run unit tests
+npm run test:e2e   # Run end-to-end tests
 ```
 
-## 📚 Struttura dei Rami
+## 👩‍💻 About the Creator
 
-### Ramo Principale
+I'm Alice Mandelli, a UX/UI Designer and Front-end Developer with over a decade of experience crafting digital experiences. Winner of the Nielsen Norman Intranet Design Annual Award 2021, I specialize in creating intuitive interfaces that combine aesthetic excellence with technical precision.
 
-- **main**: Ramo stabile che riflette sempre la versione rilasciata del sito.
+### 🌟 Connect & Collaborate
 
-### Rami di Sviluppo
+- 🎨 Portfolio: [alys5.eu](https://alys5.eu)
+- 💼 LinkedIn: [linkedin.com/in/alys5](https://linkedin.com/in/alys5)
+- 🌐 Fiverr: [fiverr.com/alys_5](https://fiverr.com/alys_5)
 
-- **develop**: Punto di partenza per tutte le nuove funzionalità e correzioni di bug. Lo sviluppo attivo avviene in questo ramo.
+## 💡 Contributing
 
-### Rami di Funzionalità (feature/\*)
+Your contributions are welcome! Here's how you can help:
 
-- **feature/ux-ui-redesign**: Per modifiche significative all'interfaccia utente.
-- **feature/e-commerce**: Per l'implementazione di un negozio online.
-- **feature/nuovo-modulo**: Per l'aggiunta di un nuovo modulo al sito.
-
-### Rami di Correzione Bug (bugfix/\*)
-
-- **bugfix/problema-login**: Per la correzione di un bug specifico legato al login.
-- **bugfix/errore-visualizzazione**: Per risolvere problemi di visualizzazione.
-
-### Come Utilizzare Questa Struttura
-
-1. **Inizia sempre da `develop`**: Crea un nuovo ramo da `develop` per ogni nuova funzionalità o bugfix.
-2. **Isola le modifiche**: Ogni ramo deve contenere solo le modifiche specifiche alla funzionalità o al bug.
-3. **Crea pull request**: Una volta completato il lavoro in un ramo, crea una pull request verso `develop` per una revisione.
-4. **Fusione in `develop`**: Dopo l'approvazione, fondi il tuo ramo in `develop`.
-5. **Aggiorna `main`**: Periodicamente, crea un ramo di rilascio basato su `develop` e fondilo in `main` per rilasciare una nuova versione.
-
-### Vantaggi
-
-- **Organizzazione**: La struttura dei rami semplifica la gestione e comprensione del codice.
-- **Flessibilità**: Permette di lavorare su più funzionalità contemporaneamente senza conflitti.
-- **Tracciabilità**: Facilita la verifica dello stato di ogni funzionalità e della cronologia delle modifiche.
-- **Collaborazione**: Simula un ambiente collaborativo anche per un progetto individuale.
+- ⭐ Star this repository
+- 🔄 Fork and submit pull requests
+- 🐛 Report issues or suggest features
+- 🤝 Share with your network
 
 ## 📝 License
 
-Distribuito sotto la licenza MIT. Per i dettagli, consulta il file [LICENSE](LICENSE).
+Released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. This work is dedicated to the public domain. You can copy, modify, distribute, and perform the work, even for commercial purposes, all without asking permission.
 
-## 👩‍💻 Su di Me
-
-Sono Alice Mandelli, una UX/UI Designer e Front-end Developer con oltre 10 anni di esperienza nel creare esperienze digitali uniche. Vincitrice del Nielsen Norman Intranet Design Annual Award 2021, mi dedico a creare interfacce intuitive che combinano estetica e funzionalità.
-
-### 🔗 Connettiti con Me
-
-- Portfolio: [alys5.eu](https://alys5.eu)
-- LinkedIn: [linkedin.com/in/alys5](https://linkedin.com/in/alys5)
-- Fiverr: [fiverr.com/alys_5](https://fiverr.com/alys_5)
+For more information about this license, visit: [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## 🙏 Acknowledgments
 
-- Icone da [Lucide Icons](https://lucide.dev)
-- Animazioni con [GSAP](https://greensock.com/gsap)
-- Distribuito tramite [Vercel](https://vercel.com)
-- Analytics da [Vercel Analytics](https://vercel.com/analytics)
+Built with:
+
+- 💫 [GSAP](https://greensock.com/gsap) for sophisticated animations
+- 🎨 [Lucide Icons](https://lucide.dev) for crisp iconography
+- 🚀 [Vercel](https://vercel.com) for reliable deployment
+- 📊 [Vercel Analytics](https://vercel.com/analytics) for performance insights
+
+## 🎁 Support this Project
+
+If you enjoy this project and would like to support future development, consider contributing via one of the platforms below:
+
+- **GitHub Sponsors**: [Alys5](https://github.com/sponsors/alys5)
+- **Patreon**: [Alys5 Creator](https://www.patreon.com/alys5creator)
+- **Open Collective**: [Alys5 Portfolio](https://opencollective.com/alys5-portfolio)
+- **Ko-fi**: [ko-fi.com/alys5](https://ko-fi.com/alys5)
+- **Liberapay**: [alys5](https://liberapay.com/alys5)
+- **Issuehunt**: [alys5](https://issuehunt.io/r/alys5)
+- **Polar**: [alys5](https://polar.sh/alys5)
+- **Buy Me a Coffee**: [buymeacoffee.com/alys5](https://buymeacoffee.com/alys5)
+- **Thanks.dev**: [Alys5](https://thanks.dev/alys5)
+- **Custom Support**: [Support on Fiverr](https://fiverr.com/alys_5) | [Support on Alys5.eu](https://alys5.eu/support)
+
+---
+
+Created with dedication by [Alice Mandelli](https://alys5.eu)
