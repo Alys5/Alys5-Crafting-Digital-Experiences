@@ -2,19 +2,18 @@
 
 > Crafting intuitive digital experiences through UX/UI Design and Front-end Development
 
-![Version](https://img.shields.io/badge/version-0.0.0-blue)
+![Version](https://img.shields.io/badge/version-0.0.5-yellow)
 ![License](https://img.shields.io/badge/license-CC0%201.0-green)
 ![Framework](https://img.shields.io/badge/framework-Vue.js%203-brightgreen)
 ![Styling](https://img.shields.io/badge/styling-Tailwind%20CSS-38bdf8)
+![State Management](https://img.shields.io/badge/state%20management-Pinia-yellow)
+![Build Tool](https://img.shields.io/badge/build%20tool-Vite-orange)
+![Router](https://img.shields.io/badge/router-Vue%20Router-4f9cda)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black)
 
 ## 🎯 Overview
 
 Professional portfolio showcasing expertise in UX/UI Design and Front-end Development. Built with Vue.js 3 and Tailwind CSS, this site demonstrates modern web development practices and design principles.
-
----
-
-![Alys_5 Logo](src/asset/logo.svg)
 
 ---
 
@@ -36,28 +35,13 @@ npm install
 npm run format
 
 # Start development server
-npm run dev
+npm run start
+
+# Deploy to Vercel and Push to GitHub
+npm run deploy
 ```
 
 Your local instance will be available at `http://localhost:3000` ✨
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-### Lint the Code
-
-```bash
-npm run lint
-```
 
 ## 💫 Features
 
@@ -123,7 +107,7 @@ If you find this project helpful, consider supporting its development:
 
 - ⭐ Star the repository
 - 💰 Financial support:
-  - [GitHub Sponsors](https://github.com/sponsors/alys5)
+  - [GitHub](https://github.com/alys5)
   - [Patreon](https://www.patreon.com/alys5creator)
   - [Open Collective](https://opencollective.com/alys5-portfolio)
   - [Ko-fi](https://ko-fi.com/alys5)
