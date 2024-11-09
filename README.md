@@ -1,81 +1,147 @@
 # Alys5 | Crafting Digital Experiences 🎨
-UX/UI Design • Front-End Development • Digital Innovation
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Vue](https://img.shields.io/badge/vue-3.x-brightgreen)
-![Vuetify](https://img.shields.io/badge/vuetify-3.x-blue)
+> Crafting intuitive digital experiences through UX/UI Design and Front-end Development
+
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
 ![License](https://img.shields.io/badge/license-CC0%201.0-green)
+![Framework](https://img.shields.io/badge/framework-Vue.js%203-brightgreen)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black)
 
-> My professional portfolio website showcasing a decade of experience in UX/UI Design and Front-end Development. Built with Vue.js and Vuetify, this site demonstrates my approach to creating intuitive and engaging digital experiences.
+## 🎯 Overview
 
-## 🚀 Quick Setup
+Professional portfolio showcasing expertise in UX/UI Design and Front-end Development. Built with Vue.js 3 and Tailwind CSS, this site demonstrates modern web development practices and design principles.
+
+## 🚀 Quick Start
+
 ```bash
-# Clone and install dependencies
+# Clone repository
 git clone https://github.com/Alys5/Alys5-Portfolio.git
+
+# Navigate to project directory
 cd Alys5-Portfolio
+
+# Install dependencies
 npm install
 
-# Launch development server
+# Start development server
 npm run dev
 ```
-Visit `http://localhost:3000` to see your local instance ✨
 
-## 💫 Key Features
-- 🎯 Responsive design optimized for all devices
-- 🌓 Elegant Light/Dark theme implementation
-- 📱 Mobile-first approach
+Your local instance will be available at `http://localhost:3000` ✨
+
+## 💫 Features
+
+- 🎨 Modern, minimalist design language
+- 🌓 Dynamic theme switching (Light/Dark)
+- 📱 Responsive, mobile-first layout
 - ⚡ Performance-optimized with Vercel Edge Network
-- 🎮 Interactive UI components with seamless transitions
-- 📊 Detailed project case studies
-- 🔍 SEO optimized architecture
+- 🎮 Smooth animations and transitions
+- 📊 Detailed case studies and project showcases
+- 🔍 SEO-optimized structure
 
-## 🛠️ Tech Stack
-```bash
-  framework: "Vue.js 3",
-  ui: "Tailwind",
-  state: "Pinia",
-  styling: "SCSS",
-  deployment: "Vercel",
+## 🛠️ Technology Stack
+
+```javascript
+{
+  "frontend": {
+    "framework": "Vue.js 3",
+    "styling": "Tailwind CSS",
+    "stateManagement": "Pinia",
+    "buildTool": "Vite"
+  },
+  "deployment": "Vercel",
+  "performance": {
+    "imageOptimization": "next/image",
+    "caching": "Vercel Edge Cache",
+    "analytics": "Vercel Analytics"
+  }
+}
 ```
 
-## 🙏 Acknowledgments
-Built with:
-- 🚀 [Vercel](https://vercel.com) for reliable deployment
+## 👩‍💻 About Me
 
-## 👩‍💻 About the Creator
 I'm Alice Mandelli, a UX/UI Designer and Front-end Developer with over a decade of experience crafting digital experiences. Winner of the Nielsen Norman Intranet Design Annual Award 2021, I specialize in creating intuitive interfaces that combine aesthetic excellence with technical precision.
 
-### 🌟 Connect & Collaborate
-- 🎨 Portfolio: [alys5.eu](https://alys5.eu)
-- 💼 LinkedIn: [linkedin.com/in/alys5](https://linkedin.com/in/alys5)
-- 🌐 Fiverr: [fiverr.com/alys_5](https://fiverr.com/alys_5)
+## 🤝 Connect
 
-## 💡 Contributing
-Your contributions are welcome! Here's how you can help:
-- ⭐ Star this repository
-- 🔄 Fork and submit pull requests
-- 🐛 Report issues or suggest features
-- 🤝 Share with your network
+- 🌐 Portfolio: [alys5.eu](https://alys5.eu)
+- 💼 LinkedIn: [linkedin.com/in/alys5](https://linkedin.com/in/alys5)
+- 🎨 Fiverr: [fiverr.com/alys_5](https://fiverr.com/alys_5)
+
+## 🤝 Contributing
+
+Your contributions make this project better! Here's how to help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📝 License
-Released under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. This work is dedicated to the public domain. You can copy, modify, distribute, and perform the work, even for commercial purposes, all without asking permission.
-For more information about this license, visit: [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
-## 🎁 Support this Project
-If you enjoy this project and would like to support future development, consider contributing via one of the platforms below:
-- **GitHub Sponsors**: [Alys5](https://github.com/sponsors/alys5)
-- **Patreon**: [Alys5 Creator](https://www.patreon.com/alys5creator)
-- **Open Collective**: [Alys5 Portfolio](https://opencollective.com/alys5-portfolio)
-- **Ko-fi**: [ko-fi.com/alys5](https://ko-fi.com/alys5)
-- **Liberapay**: [alys5](https://liberapay.com/alys5)
-- **Issuehunt**: [alys5](https://issuehunt.io/r/alys5)
-- **Polar**: [alys5](https://polar.sh/alys5)
-- **Buy Me a Coffee**: [buymeacoffee.com/alys5](https://buymeacoffee.com/alys5)
-- **Thanks.dev**: [Alys5](https://thanks.dev/alys5)
-- **Fiverr**: [Alys_5](https://fiverr.com/alys_5)
-- **Custom Support**: [Support on Alys5.eu](https://alys5.eu/support)
+This project is released under the [CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) Public Domain Dedication. You are free to:
+
+- Copy, modify, and distribute the work
+- Use it for commercial purposes
+- All without asking permission
+
+## 💝 Support
+
+If you find this project helpful, consider supporting its development:
+
+- ⭐ Star the repository
+- 💰 Financial support:
+  - [GitHub Sponsors](https://github.com/sponsors/alys5)
+  - [Patreon](https://www.patreon.com/alys5creator)
+  - [Open Collective](https://opencollective.com/alys5-portfolio)
+  - [Ko-fi](https://ko-fi.com/alys5)
+  - [Liberapay](https://liberapay.com/alys5)
+  - [Issuehunt](https://issuehunt.io/r/alys5)
+  - [Polar](https://polar.sh/alys5)
+  - [Buy Me a Coffee](https://buymeacoffee.com/alys5)
+  - [Thanks.dev](https://thanks.dev/alys5)
+  - [Fiverr Services](https://fiverr.com/alys_5)
+  - [Support](https://alys5.eu/support)
 
 ---
 
-Created with dedication by [Alice Mandelli](https://alys5.eu)
+Made with ♥️ by [Alice Mandelli](https://alys5.eu)
+
+---
+
+# Alys5-Portfolio
+
+This template should help get you started developing with Vue 3 in Vite.
+
+## Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
