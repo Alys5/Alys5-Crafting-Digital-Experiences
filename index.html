@@ -1,19 +1,25 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2d634c3351.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Alys5.eu" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Alys5 | Crafting Digital Experiences 🎨</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- The lang attribute is now dynamic, controlled by Vue -->
+    <div id="app" :lang="language"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

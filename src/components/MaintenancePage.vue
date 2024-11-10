@@ -1,15 +1,13 @@
-<script>
-export default {
-  name: 'MaintenancePage',
-  data() {
-    return {
-      calendarLink: 'https://calendar.app.google/ppakzD82jGkDSzWN7',
-      linkedinLink: 'https://www.linkedin.com/in/alys5',
-      githubLink: 'https://github.com/alys5',
-      fiverrLink: 'https://www.fiverr.com/alys_5',
-    }
-  },
-}
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n() // Accessing translation function
+
+// Links
+const calendarLink = 'https://calendar.app.google/ppakzD82jGkDSzWN7'
+const linkedinLink = 'https://www.linkedin.com/in/alys5'
+const githubLink = 'https://github.com/alys5'
+const fiverrLink = 'https://www.fiverr.com/alys_5'
 </script>
 
 <template>
@@ -22,19 +20,18 @@ export default {
         <!-- Messaggio di Benvenuto -->
         <div class="bg-dark p-8 rounded-xl shadow-xl text-center">
           <h1 class="text-5xl font-extrabold text-yellow-500 mb-4 tracking-wider">
-            Siamo in fase di aggiornamento!
+            {{ t('maintenance.title') }}
           </h1>
           <p class="text-pink-300 text-lg">
-            Stiamo migliorando l'esperienza per te. Torna a trovarci tra poco!
+            {{ t('maintenance.subtitle') }}
           </p>
         </div>
 
         <!-- Alert di Manutenzione -->
         <div class="bg-gradient-custom text-light-lightest p-6 rounded-xl shadow-xl">
-          <p class="font-semibold text-xl">🚧 Manutenzione in corso 🚧</p>
+          <p class="font-semibold text-xl">🚧 {{ t('maintenance.alertTitle') }} 🚧</p>
           <p class="text-lg">
-            Stiamo ottimizzando il sito per offrirti un'esperienza migliore. Ci scusiamo per il
-            disagio!
+            {{ t('maintenance.alertMessage') }}
           </p>
         </div>
       </div>
@@ -49,7 +46,7 @@ export default {
           class="btn-primary hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center py-4 px-8 rounded-xl shadow-xl transform"
         >
           <i class="fas fa-calendar-check mr-3"></i>
-          Prenota il tuo appuntamento
+          {{ t('cta.schedule') }}
         </a>
 
         <!-- Scopri il mio LinkedIn -->
@@ -60,7 +57,7 @@ export default {
           class="btn-secondary hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center py-4 px-8 rounded-xl shadow-xl transform"
         >
           <i class="fab fa-linkedin mr-3"></i>
-          Scopri il mio LinkedIn
+          {{ t('cta.linkedin') }}
         </a>
 
         <!-- Esplora il mio GitHub -->
@@ -71,7 +68,7 @@ export default {
           class="btn-secondary hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center py-4 px-8 rounded-xl shadow-xl transform"
         >
           <i class="fab fa-github mr-3"></i>
-          Esplora il mio GitHub
+          {{ t('cta.github') }}
         </a>
 
         <!-- Fai un salto su Fiverr -->
@@ -82,7 +79,7 @@ export default {
           class="btn-secondary hover:scale-105 transition-all duration-300 ease-in-out flex items-center justify-center py-4 px-8 rounded-xl shadow-xl transform"
         >
           <i class="fab fa-fiverr mr-3"></i>
-          Fai un salto su Fiverr
+          {{ t('cta.fiverr') }}
         </a>
       </div>
     </div>
