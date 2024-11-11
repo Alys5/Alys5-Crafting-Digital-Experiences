@@ -1,26 +1,29 @@
 <template>
-  <footer class="bg-gray-800 dark:bg-gray-900 text-white py-6 mt-auto border-t border-gray-700">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="bg-gray-900 text-white py-8 mt-auto border-t border-gray-700">
+    <div class="container mx-auto px-6 lg:px-8">
       <div
-        class="flex flex-col items-center justify-center md:flex-row md:justify-between space-y-4 md:space-y-0"
+        class="flex flex-col items-center justify-between md:flex-row md:justify-between space-y-6 md:space-y-0"
       >
-        <p class="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left">
+        <!-- Copyright Text -->
+        <p class="text-sm text-gray-400 text-center md:text-left">
           &copy; 2023 Your Name. All rights reserved.
         </p>
-        <div class="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+
+        <!-- Social Links -->
+        <div class="flex space-x-6 mt-4 md:mt-0 justify-center">
+          <a href="#" class="text-gray-400 hover:text-primary-500 transition-all duration-200">
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+          <a href="#" class="text-gray-400 hover:text-primary-500 transition-all duration-200">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+          <a href="#" class="text-gray-400 hover:text-primary-500 transition-all duration-200">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+          <a href="#" class="text-gray-400 hover:text-primary-500 transition-all duration-200">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+          <a href="#" class="text-gray-400 hover:text-primary-500 transition-all duration-200">
             <i class="fab fa-facebook"></i>
           </a>
         </div>
@@ -34,3 +37,10 @@ export default {
   name: 'FooterBar',
 }
 </script>
+
+<style scoped>
+/* Add custom primary color for hover effects */
+.text-primary-500 {
+  color: #4f46e5; /* Customize this primary color as needed */
+}
+</style>
