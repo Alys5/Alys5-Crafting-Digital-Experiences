@@ -1,32 +1,32 @@
 export default {
   en: {
     maintenance: {
-      title: 'We are updating!',
-      subtitle: 'We are improving the experience for you. Check back soon!',
-      alertTitle: '🚧 Maintenance in progress 🚧',
+      title: 'Website under maintenance!',
+      subtitle: 'We are improving your experience. Check back soon!',
+      alertTitle: '🚧 Under Maintenance 🚧',
       alertMessage:
-        'We are optimizing the site to offer you a better experience. Sorry for the inconvenience!',
+        'We are currently performing website maintenance to provide you with a better experience. Thank you for your patience!',
     },
     cta: {
       schedule: 'Book your appointment',
-      linkedin: 'Check my LinkedIn',
-      github: 'Explore my GitHub',
-      fiverr: 'Visit me on Fiverr',
+      linkedIn: 'View my LinkedIn profile',
+      github: 'View my GitHub profile',
+      fiverr: 'View my Fiverr profile',
     },
   },
   it: {
     maintenance: {
-      title: 'Siamo in fase di aggiornamento!',
-      subtitle: "Stiamo migliorando l'esperienza per te. Torna a trovarci tra poco!",
-      alertTitle: '🚧 Manutenzione in corso 🚧',
+      title: 'Sito in manutenzione!',
+      subtitle: 'Stiamo migliorando la tua esperienza. Torna presto!',
+      alertTitle: '🚧 Manutenzione in corso 🚧', //Consider changing this to something less literal
       alertMessage:
-        "Stiamo ottimizzando il sito per offrirti un'esperienza migliore. Ci scusiamo per il disagio!",
+        "Stiamo eseguendo lavori di manutenzione per offrirti un'esperienza migliore. Grazie per la pazienza!",
     },
     cta: {
       schedule: 'Prenota il tuo appuntamento',
-      linkedin: 'Scopri il mio LinkedIn',
-      github: 'Esplora il mio GitHub',
-      fiverr: 'Fai un salto su Fiverr',
+      linkedIn: 'Vedi il mio profilo LinkedIn',
+      github: 'Vedi il mio profilo GitHub',
+      fiverr: 'Vedi il mio profilo Fiverr',
     },
   },
 }
