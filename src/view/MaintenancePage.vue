@@ -13,25 +13,25 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-neutral-900 text-white">
+  <div class="min-h-screen flex items-center justify-center bg-neutral-background text-white">
     <div
-      class="max-w-6xl w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-800 rounded-3xl border border-yellow-500/20 shadow-2xl min-h-[70vh]"
+      class="max-w-6xl w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-neutral-surface rounded-3xl border border-accent-pink/20 shadow-md-3 min-h-[70vh]"
     >
       <!-- Welcome Section -->
       <div class="lg:col-span-2 space-y-8">
         <div
-          class="p-8 text-center relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 border border-yellow-500/10"
+          class="p-8 text-center relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-accent-pink/10"
         >
           <!-- Radial Gradient Overlay -->
           <div
             class="absolute inset-0 opacity-20"
-            style="background: radial-gradient(circle at 30% 30%, rgb(255, 255, 0), transparent)"
+            style="background: radial-gradient(circle at 30% 30%, var(--tw-gradient-stops))"
           ></div>
 
           <!-- Terminal Icon -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-12 w-12 mx-auto mb-6 text-yellow-400"
+            class="h-12 w-12 mx-auto mb-6 text-accent-pink"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -45,29 +45,24 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           </svg>
 
           <h1
-            class="text-4xl md:text-5xl font-extrabold mb-4 tracking-wider"
-            style="
-              background: linear-gradient(to right, #ffd700, #ffa500, #ec4899);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            "
+            class="text-4xl md:text-5xl font-heading-font font-extrabold mb-4 tracking-wider bg-gradient-to-r from-primary to-accent-dark bg-clip-text text-transparent"
           >
             {{ t('maintenance.title') }}
           </h1>
-          <p class="text-lg md:text-xl text-gray-300">
+          <p class="text-lg md:text-xl text-neutral-light">
             {{ t('maintenance.subtitle') }}
           </p>
         </div>
 
         <!-- Alert Section -->
         <div
-          class="p-6 rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 border border-blue-500/20"
+          class="p-6 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-accent-dark/20"
         >
           <div class="flex items-center space-x-4">
             <!-- Code Icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-blue-400"
+              class="h-6 w-6 text-accent-dark"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -79,11 +74,11 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
               />
             </svg>
-            <p class="font-semibold text-xl text-blue-400">
+            <p class="font-semibold text-xl text-accent-dark">
               {{ t('maintenance.alertTitle') }}
             </p>
           </div>
-          <p class="text-gray-300 text-lg mt-2">
+          <p class="text-neutral-light text-lg mt-2">
             {{ t('maintenance.alertMessage') }}
           </p>
         </div>
@@ -96,32 +91,32 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           :label="t('cta.schedule')"
           :link="calendarLink"
           variant="elevated"
-          color="bg-social-google-calendar-500"
+          color="bg-accent-pink"
           icon="fa-solid fa-calendar"
-          hoverColor="bg-social-google-calendar-600"
+          hoverColor="bg-accent-pink/80"
         />
         <BaseButton
           :label="t('cta.linkedin')"
           :link="linkedinLink"
-          color="bg-social-linkedin-500"
+          color="bg-blue-500"
           icon="fab fa-linkedin-in"
-          hoverColor="bg-social-linkedin-600"
+          hoverColor="bg-blue-600"
           variant="elevated"
         />
         <BaseButton
           :label="t('cta.github')"
           :link="githubLink"
-          color="bg-social-github-600"
+          color="bg-gray-500"
           icon="fab fa-github"
-          hoverColor="bg-social-github-700"
+          hoverColor="bg-gray-600"
           variant="elevated"
         />
         <BaseButton
           :label="t('cta.fiverr')"
           :link="fiverrLink"
-          color="bg-social-fiverr-500"
+          color="bg-green-500"
           icon="fab fa-fiverr"
-          hoverColor="bg-social-fiverr-600"
+          hoverColor="bg-green-600"
           variant="elevated"
         />
       </div>
@@ -134,7 +129,7 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
 @supports not (-webkit-background-clip: text) {
   h1 {
     background: unset;
-    color: #ffd700;
+    color: var(--tw-gradient-from);
   }
 }
 </style>

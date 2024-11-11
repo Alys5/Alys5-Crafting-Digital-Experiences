@@ -1,28 +1,56 @@
 <template>
   <select
-    v-model="selectedLang"
-    class="px-4 py-2 rounded-md border border-gray-300 text-sm bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-700 dark:text-gray-200 font-['Space Grotesk', sans-serif]"
-    @change="changeLanguage"
+    v-model="internalValue"
+    :class="[
+      'px-4 py-2 rounded-md-lg border border-neutral-DEFAULT text-sm bg-neutral-surface text-neutral-light focus:outline-none focus:ring-2 focus:ring-accent-dark font-heading-font',
+      customClasses,
+    ]"
+    @change="handleChange"
   >
-    <option value="en">English</option>
-    <option value="it">Italian</option>
-    <!-- Example addition -->
+    <option
+      v-for="option in options"
+      :key="option.value"
+      :value="option.value"
+      :class="['bg-neutral-surface text-neutral-light']"
+    >
+      {{ option.label }}
+    </option>
   </select>
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue'
+import { ref, watch, defineProps, defineEmits } from 'vue'
 
-// Define props and emits
 const props = defineProps({
-  modelValue: String,
+  modelValue: {
+    type: [String, Number],
+    required: true,
+  },
+  options: {
+    type: Array,
+    required: true,
+    default: () => [], // Expects an array of objects: [{ value: 'en', label: 'English' }, ...]
+  },
+  customClasses: {
+    type: String,
+    default: '',
+  },
 })
 
 const emit = defineEmits(['update:modelValue'])
 
-const selectedLang = ref(props.modelValue)
+const internalValue = ref(props.modelValue)
 
-function changeLanguage() {
-  emit('update:modelValue', selectedLang.value)
+// Sync internalValue with modelValue
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    internalValue.value = newValue
+  },
+)
+
+// Emit changes to parent
+function handleChange() {
+  emit('update:modelValue', internalValue.value)
 }
 </script>
