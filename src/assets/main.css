@@ -1,126 +1,127 @@
-@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Pulsanti */
-.btn-primary {
-  @apply bg-yellow-500 text-black font-medium py-2 px-4 rounded-md shadow-material-sm transition-all;
-}
-.btn-primary:hover {
-  @apply bg-yellow-600 shadow-material-md;
+@layer base {
+  :root {
+    /* System tokens */
+    --md-sys-elevation-level1: theme(boxShadow.md-1);
+    --md-sys-elevation-level2: theme(boxShadow.md-2);
+    --md-sys-elevation-level3: theme(boxShadow.md-3);
+    --md-sys-elevation-level4: theme(boxShadow.md-4);
+    --md-sys-elevation-level5: theme(boxShadow.md-5);
+
+    /* Light theme colors */
+    --color-background: #ffffff;
+    --color-surface: #f8f9fa;
+    --color-primary: theme(colors.primary.yellow.500);
+    --color-secondary: theme(colors.primary.blue.500);
+    --color-accent: theme(colors.primary.pink.500);
+    --color-text: theme(colors.neutral.900);
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --color-background: theme(colors.neutral.background);
+    --color-surface: theme(colors.neutral.surface);
+    --color-primary: theme(colors.primary.yellow.500);
+    --color-secondary: theme(colors.primary.blue.400);
+    --color-accent: theme(colors.primary.pink.400);
+    --color-text: theme(colors.neutral.50);
+  }
+
+  /* Base styles */
+  body {
+    @apply font-sans bg-[var(--color-background)] text-[var(--color-text)] transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-medium;
+  }
 }
 
-.btn-secondary {
-  @apply bg-teal-500 text-white font-medium py-2 px-4 rounded-md shadow-material-sm transition-all;
-}
-.btn-secondary:hover {
-  @apply bg-teal-600 shadow-material-md;
+@layer components {
+  /* Material Design 3 Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-lg
+           font-medium transition-all duration-300 hover-state-layer
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-filled {
+    @apply bg-[var(--color-primary)] text-neutral-900
+           shadow-md-1 hover:shadow-md-2;
+  }
+
+  .btn-tonal {
+    @apply bg-opacity-90 bg-[var(--color-secondary)]
+           text-white shadow-md-1 hover:shadow-md-2;
+  }
+
+  .btn-outlined {
+    @apply border-2 border-[var(--color-primary)]
+           text-[var(--color-primary)] hover:bg-opacity-10;
+  }
+
+  /* Material Design 3 Card styles */
+  .card {
+    @apply bg-[var(--color-surface)] rounded-lg p-4
+           shadow-md-1 hover:shadow-md-2
+           transition-shadow duration-300;
+  }
+
+  /* Bento Box Grid styles */
+  .bento-grid {
+    @apply grid gap-4 p-4
+           grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+           auto-rows-min;
+  }
+
+  .bento-item {
+    @apply rounded-lg overflow-hidden
+           shadow-md-1 hover:shadow-md-2
+           transition-all duration-300
+           bg-[var(--color-surface)];
+  }
 }
 
-.btn-outline {
-  @apply border-2 border-yellow-500 text-yellow-500 font-medium py-2 px-4 rounded-md transition-all;
-}
-.btn-outline:hover {
-  @apply bg-yellow-50 text-yellow-600 shadow-material-xs;
-}
-
-/* Header */
-.header {
-  @apply bg-dark text-white py-4 px-6 shadow-material-md;
-}
-.header-title {
-  @apply font-bold text-2xl text-yellow-400;
-}
-.header-nav {
-  @apply flex space-x-4;
-}
-.header-nav-item {
-  @apply text-white hover:text-yellow-300 transition-colors;
-}
-
-/* Footer */
-.footer {
-  @apply bg-dark text-gray-300 py-6 px-8 shadow-inner;
-}
-.footer-link {
-  @apply text-blue-500 hover:text-blue-400 transition-colors;
-}
-.footer-text {
-  @apply text-sm font-light;
-}
-
-/* Sezioni principali */
-.section-title {
-  @apply text-pink-300 font-bold text-3xl mb-4;
-}
-.section-subtitle {
-  @apply text-teal-300 font-semibold text-xl mb-2;
-}
-.section-content {
-  @apply text-gray-100 font-light leading-relaxed;
-}
-.section-container {
-  @apply bg-dark text-white p-8 rounded-xl shadow-material-lg;
-}
-
-/* Testi */
-.heading {
-  @apply text-yellow-500 font-extrabold;
-}
-.subheading {
-  @apply text-blue-600 font-semibold;
-}
-.paragraph {
-  @apply text-gray-200 leading-relaxed;
-}
-.link {
-  @apply text-blue-500 underline hover:text-blue-400;
-}
-
-/* Backgrounds */
 @layer utilities {
-  .bg-gradient-custom {
-    background-image: linear-gradient(145deg, #fedd44, #5da4f9, #f2b7d4);
-    color: white;
+  /* Material Design 3 State Layer utilities */
+  .state-layer-opacity-hover {
+    @apply hover:bg-neutral-500 hover:bg-opacity-10;
   }
-  .bg-light {
-    background-color: theme('colors.gray-200');
-    color: theme('colors.gray-800');
+
+  .state-layer-opacity-focus {
+    @apply focus:bg-neutral-500 focus:bg-opacity-20;
   }
-  .bg-dark {
-    background-color: theme('colors.custom-background');
-    color: white;
+
+  /* Custom shape utilities */
+  .shape-small {
+    @apply rounded-md;
   }
-  .bg-section {
-    background-color: theme('colors.green-50');
-    color: theme('colors.gray-900');
+
+  .shape-medium {
+    @apply rounded-lg;
+  }
+
+  .shape-large {
+    @apply rounded-xl;
   }
 }
 
-/* Spaziatura e layout */
-.container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-.grid-2 {
-  @apply grid grid-cols-1 sm:grid-cols-2 gap-8;
-}
-.grid-3 {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
-}
-.flex-center {
-  @apply flex items-center justify-center;
-}
-.flex-col-center {
-  @apply flex flex-col items-center justify-center;
-}
-.spacing-lg {
-  @apply my-12;
-}
-.spacing-md {
-  @apply my-8;
-}
-.spacing-sm {
-  @apply my-4;
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,45 +1,48 @@
-import { exec } from 'child_process'
+import { execSync } from 'child_process'
 import simpleGit from 'simple-git'
+import inquirer from 'inquirer'
 
-// Funzione per eseguire un comando shell
-const executeCommand = (command) => {
-  return new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        reject(error)
-        return
-      }
-      resolve(stdout || stderr)
-    })
-  })
-}
+const runCommand = (command) => execSync(command, { stdio: 'inherit' })
 
-// Funzione principale per il deploy
 const deploy = async () => {
   try {
-    console.log('Formattazione del codice...')
-    await executeCommand('npm run format')
+    console.log('Formatting code...')
+    runCommand('npm run format')
 
-    console.log('Lint del codice...')
-    await executeCommand('npm run lint')
+    console.log('Linting code...')
+    runCommand('npm run lint')
 
-    console.log('Build del progetto...')
-    await executeCommand('npm run build')
+    console.log('Building project...')
+    runCommand('npm run build')
 
-    // Aggiungi e commetti le modifiche su GitHub
     const git = simpleGit()
     await git.add('.')
-    await git.commit('Auto-deploy commit')
-    await git.push('origin', 'main') // Assumi che il branch principale sia 'main'
 
-    console.log('Modifiche pushate su GitHub.')
+    const { message } = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'message',
+        message: 'Commit message:',
+        default: 'Auto-deploy commit',
+      },
+    ])
+    await git.commit(message)
+    await git.push('origin', 'develop')
 
-    // Deploy su Vercel
-    await executeCommand('vercel --prod')
+    console.log('Changes pushed to develop branch.')
 
-    console.log('Deploy su Vercel completato.')
+    await git.checkout('main')
+    await git.merge('develop')
+    await git.push('origin', 'main')
+
+    console.log('Changes merged to main branch.')
+
+    console.log('Deploying to Vercel...')
+    runCommand('vercel --prod')
+
+    console.log('Deploy to Vercel complete.')
   } catch (error) {
-    console.error('Errore durante il deploy:', error)
+    console.error('Error during deploy:', error)
   }
 }
 

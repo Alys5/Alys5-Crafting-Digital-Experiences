@@ -1,16 +1,30 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import LanguageSwitcher from './components/LanguageSwitcher.vue'
 </script>
 
 <template>
-  <div class="relative min-h-screen">
-    <!-- LanguageSwitcher positioned in the top-right corner -->
-    <div class="absolute top-4 right-4">
-      <LanguageSwitcher />
-    </div>
-    <RouterView />
-  </div>
+  <RouterView v-slot="{ Component }">
+    <transition
+      enter-active-class="transition duration-300 ease-md-standard"
+      enter-from-class="opacity-0 translate-y-4"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-md-standard"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <component :is="Component" />
+    </transition>
+  </RouterView>
 </template>
 
-<style scoped></style>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
