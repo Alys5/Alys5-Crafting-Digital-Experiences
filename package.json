@@ -1,6 +1,6 @@
 {
   "name": "alys5-portfolio",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "start": "npm run format && npm run dev",
+    "start": "npm run format && npm run lint && npm run dev",
     "deploy": "npm run format && npm run lint && npm run build && node deploy.js"
   },
   "dependencies": {
