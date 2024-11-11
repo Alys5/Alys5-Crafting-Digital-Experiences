@@ -32,7 +32,7 @@ const deploy = async () => {
     console.log('Changes pushed to develop branch.')
 
     await git.checkout('main')
-    await git.merge('develop')
+    await git.merge(['develop', '-m', 'Merge develop into main'])
     await git.push('origin', 'main')
 
     console.log('Changes merged to main branch.')
