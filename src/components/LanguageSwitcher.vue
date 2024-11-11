@@ -9,7 +9,7 @@
 
 <script setup>
 import { ref, getCurrentInstance } from 'vue'
-import BaseSelect from './components/Base/BaseSelect.vue'
+import BaseSelect from '@/components/Base/BaseSelect.vue'
 
 const selectedLang = ref('en')
 
