@@ -7,7 +7,7 @@ import messages from './store/messages'
 
 import './assets/main.css'
 
-document.title = import.meta.env.TITLE || 'Vite App'
+document.title = import.meta.env.TITLE || 'Alys5 | Crafting Digital Experiences 🎨'
 const initialLocale = import.meta.env.LANGUAGE || 'en'
 document.documentElement.lang = initialLocale
 
