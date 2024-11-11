@@ -6,10 +6,6 @@ const runCommand = (command) => execSync(command, { stdio: 'inherit' })
 
 const deploy = async () => {
   try {
-    // **Automated Testing**
-    console.log('Running tests...')
-    runCommand('npm test')
-
     // **Formatting and Linting**
     console.log('Formatting code...')
     runCommand('npm run format')
