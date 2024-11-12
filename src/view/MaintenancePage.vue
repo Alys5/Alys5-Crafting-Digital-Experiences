@@ -1,17 +1,3 @@
-<script setup>
-import { useI18n } from 'vue-i18n'
-import BaseButton from '@/components/Base/BaseButton.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-
-const { t } = useI18n()
-
-// Links
-const calendarLink = 'https://calendar.app.google/ppakzD82jGkDSzWN7'
-const linkedinLink = 'https://www.linkedin.com/in/alys5'
-const githubLink = 'https://github.com/alys5'
-const fiverrLink = 'https://it.fiverr.com/alys_5'
-</script>
-
 <template>
   <div class="min-h-screen flex items-center justify-center bg-neutral-background text-white">
     <div
@@ -47,10 +33,10 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           <h1
             class="text-4xl md:text-5xl font-heading-font font-extrabold mb-4 tracking-wider bg-gradient-to-r from-primary to-accent-dark bg-clip-text text-transparent"
           >
-            {{ t('maintenance.title') }}
+            {{ $t('maintenance.title') }}
           </h1>
           <p class="text-lg md:text-xl text-neutral-light">
-            {{ t('maintenance.subtitle') }}
+            {{ $t('maintenance.subtitle') }}
           </p>
         </div>
 
@@ -75,11 +61,11 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
               />
             </svg>
             <p class="font-semibold text-xl text-accent-dark">
-              {{ t('maintenance.alertTitle') }}
+              {{ $t('maintenance.alertTitle') }}
             </p>
           </div>
           <p class="text-neutral-light text-lg mt-2">
-            {{ t('maintenance.alertMessage') }}
+            {{ $t('maintenance.alertMessage') }}
           </p>
         </div>
       </div>
@@ -88,7 +74,7 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
       <div class="flex flex-col gap-6 justify-center lg:col-span-1">
         <LanguageSwitcher class="mb-6" />
         <BaseButton
-          :label="t('cta.schedule')"
+          :label="$t('cta.schedule')"
           :link="calendarLink"
           variant="elevated"
           color="bg-accent-pink"
@@ -96,7 +82,7 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           hoverColor="bg-accent-pink/80"
         />
         <BaseButton
-          :label="t('cta.linkedin')"
+          :label="$t('cta.linkedin')"
           :link="linkedinLink"
           color="bg-blue-500"
           icon="fab fa-linkedin-in"
@@ -104,7 +90,7 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           variant="elevated"
         />
         <BaseButton
-          :label="t('cta.github')"
+          :label="$t('cta.github')"
           :link="githubLink"
           color="bg-gray-500"
           icon="fab fa-github"
@@ -112,10 +98,10 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
           variant="elevated"
         />
         <BaseButton
-          :label="t('cta.fiverr')"
+          :label="$t('cta.fiverr')"
           :link="fiverrLink"
           color="bg-green-500"
-          icon="fab fa-fiverr"
+          :icon="fiverrIcon"
           hoverColor="bg-green-600"
           variant="elevated"
         />
@@ -124,12 +110,16 @@ const fiverrLink = 'https://it.fiverr.com/alys_5'
   </div>
 </template>
 
-<style>
-/* Custom gradient text support for other browsers */
-@supports not (-webkit-background-clip: text) {
-  h1 {
-    background: unset;
-    color: var(--tw-gradient-from);
-  }
-}
-</style>
+<script setup>
+import BaseButton from '@/components/Base/BaseButton.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import fiverrIcon from '@/assets/icons/fiverr.svg'
+
+// Links
+const calendarLink = 'https://calendar.app.google/ppakzD82jGkDSzWN7'
+const linkedinLink = 'https://www.linkedin.com/in/alys5'
+const githubLink = 'https://github.com/alys5'
+const fiverrLink = 'https://it.fiverr.com/alys_5'
+</script>
+
+<style scoped></style>

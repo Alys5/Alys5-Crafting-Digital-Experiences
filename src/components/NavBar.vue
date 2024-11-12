@@ -9,7 +9,7 @@
         class="flex items-center text-xl md:text-2xl font-space-grotesk font-bold text-white ml-2"
       >
         <img :src="logoSrc" alt="Alys5 Portfolio Logo" class="h-8 md:h-10 mr-2" />
-        <span class="text-yellow-400">Alys</span>5
+        <span class="text-yellow-400">{{ t('nav.title') }}</span>
       </router-link>
 
       <!-- Navigation Links -->
@@ -18,13 +18,13 @@
           to="/projects"
           class="text-lg font-space-grotesk hover:text-yellow-400 transition-all duration-200"
         >
-          Projects
+          {{ t('nav.projects') }}
         </router-link>
         <router-link
           to="/about"
           class="text-lg font-space-grotesk hover:text-yellow-400 transition-all duration-200"
         >
-          About
+          {{ t('nav.about') }}
         </router-link>
       </div>
 
@@ -51,13 +51,13 @@
           to="/projects"
           class="text-lg font-space-grotesk text-white hover:text-yellow-400 transition-all duration-200"
         >
-          Projects
+          {{ t('nav.projects') }}
         </router-link>
         <router-link
           to="/about"
           class="text-lg font-space-grotesk text-white hover:text-yellow-400 transition-all duration-200"
         >
-          About
+          {{ t('nav.about') }}
         </router-link>
         <LanguageSwitcher />
         <button @click="toggleMobileMenu" class="text-white mt-4">

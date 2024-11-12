@@ -50,18 +50,6 @@ import BaseButton from '@/components/Base/BaseButton.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 
 const { t } = useI18n()
-
-const sections = [
-  {
-    // Section data here (optional static data or dynamic)
-  },
-  {
-    // Add more sections as required
-  },
-  {
-    // Add more sections as required
-  },
-]
 </script>
 
 <style scoped>

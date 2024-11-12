@@ -8,20 +8,32 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance } from 'vue'
+import { ref, watch } from 'vue'
 import BaseSelect from '@/components/Base/BaseSelect.vue'
+import { useI18n } from 'vue-i18n'
 
 const selectedLang = ref('en')
 
 // Define language options as an array of objects
 const languageOptions = [
   { value: 'en', label: 'English' },
-  { value: 'it', label: 'Italian' },
+  { value: 'it', label: 'Italiano' },
   // Altre lingue possono essere aggiunte qui
 ]
 
 function changeLanguage() {
-  const app = getCurrentInstance()
-  app.appContext.config.globalProperties.$changeLanguage(selectedLang.value)
+  const { locale } = useI18n()
+  locale.value = selectedLang.value
 }
+
+// Verifico se la lingua e cambiata e cambio il file di lingua corrispondente
+watch(
+  () => selectedLang.value,
+  async (newLang) => {
+    const { locale } = useI18n()
+    const messages = await import(`./locales/${newLang}.json`)
+    locale.value = newLang
+    locale.messages.value = messages.default
+  },
+)
 </script>

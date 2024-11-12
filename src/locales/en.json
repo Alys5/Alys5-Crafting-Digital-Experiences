@@ -1,0 +1,43 @@
+{
+  "maintenance": {
+    "title": "Debugging in Progress! 🛠️",
+    "subtitle": "Optimizing User Experience...",
+    "alertTitle": "System Update",
+    "alertMessage": "Implementing new features to enhance your browsing experience. Estimated deployment time: soon™"
+  },
+  "cta": {
+    "schedule": "Book a Code Review",
+    "linkedIn": "Connect on LinkedIn",
+    "github": "Explore My Code",
+    "fiverr": "Hire on Fiverr",
+    "primary": "Let's Create Together",
+    "secondary": "View My Process"
+  },
+  "home": {
+    "title": "< Hello, World! I'm Alice />",
+    "subtitle": "Crafting pixel-perfect interfaces with a blend of creativity and clean code",
+    "section1": {
+      "title": "Digital Solutions",
+      "description": "From wireframes to working prototypes, I transform ideas into intuitive experiences"
+    },
+    "section2": {
+      "title": "Behind the Screens",
+      "description": "Passionate about creating beautiful, functional, and accessible web experiences"
+    }
+  },
+  "alert": {
+    "info": "Pro tip: Try toggling dark mode for a different experience!",
+    "success": "Great! Your message has been successfully encrypted and sent 🚀",
+    "warning": "Don't forget to save your changes before leaving!",
+    "error": "Oops! Looks like we encountered a 404 in the matrix. Let's try again!"
+  },
+  "nav": {
+    "title": "Alys5 | Code × Design 🎨",
+    "projects": "< Projects />",
+    "about": "{ About }",
+    "contact": "Contact.now()"
+  },
+  "footer": {
+    "copy": " Alys5 © Crafted with 💜 and many cups of coffee"
+  }
+}

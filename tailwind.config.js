@@ -115,6 +115,10 @@ export default {
               height: '18px',
               marginRight: '8px', // Padding between elements
             },
+            '& > .icon': {
+              width: '18px', // Icon size
+              height: '18px',
+            },
           },
         },
       }

@@ -1,0 +1,43 @@
+{
+  "maintenance": {
+    "title": "Debugging in corso! 🛠️",
+    "subtitle": "Ottimizzazione dell'Esperienza Utente...",
+    "alertTitle": "Aggiornamento Sistema",
+    "alertMessage": "Implementazione di nuove funzionalità per migliorare la tua esperienza. Tempo stimato di deploy: coming soon™"
+  },
+  "cta": {
+    "schedule": "Prenota una Code Review",
+    "linkedIn": "Connettiti su LinkedIn",
+    "github": "Esplora il Mio Codice",
+    "fiverr": "Assumimi su Fiverr",
+    "primary": "Creiamo Insieme",
+    "secondary": "Scopri il Mio Processo"
+  },
+  "home": {
+    "title": "< Ciao, Mondo! Sono Alice />",
+    "subtitle": "Plasmo interfacce pixel-perfect unendo creatività e codice pulito",
+    "section1": {
+      "title": "Soluzioni Digitali",
+      "description": "Dai wireframe ai prototipi funzionanti, trasformo le idee in esperienze intuitive"
+    },
+    "section2": {
+      "title": "Dietro gli Schermi",
+      "description": "Appassionata di creare esperienze web belle, funzionali e accessibili"
+    }
+  },
+  "alert": {
+    "info": "Suggerimento: Prova la modalità dark per un'esperienza diversa!",
+    "success": "Perfetto! Il tuo messaggio è stato criptato e inviato con successo 🚀",
+    "warning": "Non dimenticare di salvare le modifiche prima di uscire!",
+    "error": "Ops! Sembra che abbiamo incontrato un 404 nella matrice. Riproviamo!"
+  },
+  "nav": {
+    "title": "Alys5 | Code × Design 🎨",
+    "projects": "< Progetti />",
+    "about": "{ Chi Sono }",
+    "contact": "Contattami.now()"
+  },
+  "footer": {
+    "copy": " Alys5 © Creato con 💜 e tanto caffè"
+  }
+}

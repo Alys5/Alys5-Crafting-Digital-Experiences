@@ -9,8 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "start": "npm run format && npm run lint && npm run dev",
-    "deploy": "npm run format && npm run lint && npm run build && node deploy.js"
+    "start": "npm run format && npm run lint && vite",
+    "extract-i18n": "vue-i18n-extract --vueFiles src/**/*.{vue,js} --languageFiles src/locales/*.json",
+    "deploy": "npm run build && node deploy.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -40,6 +41,7 @@
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.10",
-    "vite-plugin-vue-devtools": "^7.5.4"
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vue-i18n-extract": "^2.0.7"
   }
 }

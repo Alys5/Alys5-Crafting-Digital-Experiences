@@ -6,7 +6,7 @@
       >
         <!-- Copyright Text -->
         <p class="text-sm text-gray-400 text-center md:text-left">
-          &copy; 2023 Your Name. All rights reserved.
+          &copy; {{ new Date().getFullYear() }} {{ t('footer.copy') }}
         </p>
 
         <!-- Social Links -->
@@ -37,10 +37,3 @@ export default {
   name: 'FooterBar',
 }
 </script>
-
-<style scoped>
-/* Add custom primary color for hover effects */
-.text-primary-500 {
-  color: #4f46e5; /* Customize this primary color as needed */
-}
-</style>
