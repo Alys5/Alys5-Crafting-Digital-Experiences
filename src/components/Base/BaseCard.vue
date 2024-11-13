@@ -1,5 +1,5 @@
 <template>
-  <div :class="cardClass">
+  <div class="glass-card shadow-md-2 rounded-lg bg-white dark:bg-neutral-card">
     <slot name="image" />
     <div class="p-4">
       <slot name="title" />
@@ -9,23 +9,35 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BaseCard',
-  props: {
-    shadow: {
-      type: String,
-      default: 'md-2', // Default shadow effect
-    },
-    rounded: {
-      type: String,
-      default: 'lg', // Default rounded corners
-    },
-  },
-  computed: {
-    cardClass() {
-      return `shadow-${this.shadow} rounded-${this.rounded} bg-white`
-    },
-  },
+<style scoped>
+/* Typography */
+:global(html) {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
-</script>
+
+:global(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+}
+
+/* Visual Effects */
+.glass-card {
+  @apply transition-shadow duration-200 ease-in-out;
+}
+
+/* Animations */
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+</style>

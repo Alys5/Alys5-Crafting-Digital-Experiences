@@ -1,5 +1,5 @@
 <template>
-  <div :class="alertClass" class="p-4 rounded-md shadow-md">
+  <div :class="alertClass" class="p-4 rounded-md shadow-md glass-card">
     <slot />
   </div>
 </template>
@@ -16,13 +16,23 @@ export default {
   computed: {
     alertClass() {
       const alertTypes = {
-        info: 'bg-blue-100 text-blue-800',
-        success: 'bg-green-100 text-green-800',
-        warning: 'bg-yellow-100 text-yellow-800',
-        error: 'bg-red-100 text-red-800',
+        info: 'bg-accent-blue text-primary',
+        success: 'bg-accent-mint text-primary',
+        warning: 'bg-accent-pink text-primary',
+        error: 'bg-neutral-card text-primary',
       }
-      return alertTypes[this.type] || alertTypes.info
+      return `${alertTypes[this.type] || alertTypes.info} hover-glow`
     },
   },
 }
 </script>
+
+<style scoped>
+.glass-card {
+  @apply bg-neutral-card bg-opacity-70 backdrop-blur-md shadow-md-3 rounded-3xl;
+}
+
+.hover-glow:hover {
+  @apply transition-shadow duration-200 ease-in-out shadow-lg shadow-accent-blue/50;
+}
+</style>

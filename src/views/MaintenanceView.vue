@@ -1,12 +1,12 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-neutral-background text-white">
     <div
-      class="max-w-6xl w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-neutral-surface rounded-3xl border border-accent-pink/20 shadow-md-3 min-h-[70vh]"
+      class="max-w-6xl w-full p-8 md:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-neutral-surface rounded-3xl border border-accent-pink/20 shadow-md-3 min-h-[70vh] glass-card"
     >
       <!-- Welcome Section -->
       <div class="lg:col-span-2 space-y-8">
         <div
-          class="p-8 text-center relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-accent-pink/10"
+          class="p-8 text-center relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-accent-pink/10 hover-glow"
         >
           <!-- Radial Gradient Overlay -->
           <div
@@ -31,7 +31,7 @@
           </svg>
 
           <h1
-            class="text-4xl md:text-5xl font-heading-font font-extrabold mb-4 tracking-wider bg-gradient-to-r from-primary to-accent-dark bg-clip-text text-transparent"
+            class="heading-gradient text-4xl md:text-5xl font-heading-font font-extrabold mb-4 tracking-wider"
           >
             {{ $t('maintenance.title') }}
           </h1>
@@ -80,6 +80,7 @@
           color="bg-accent-pink"
           icon="fa-solid fa-calendar"
           hoverColor="bg-accent-pink/80"
+          class="hover-glow"
         />
         <BaseButton
           :label="$t('cta.linkedin')"
@@ -88,6 +89,7 @@
           icon="fab fa-linkedin-in"
           hoverColor="bg-blue-600"
           variant="elevated"
+          class="hover-glow"
         />
         <BaseButton
           :label="$t('cta.github')"
@@ -96,6 +98,7 @@
           icon="fab fa-github"
           hoverColor="bg-gray-600"
           variant="elevated"
+          class="hover-glow"
         />
         <BaseButton
           :label="$t('cta.fiverr')"
@@ -104,6 +107,7 @@
           :icon="fiverrIcon"
           hoverColor="bg-green-600"
           variant="elevated"
+          class="hover-glow"
         />
       </div>
     </div>
@@ -122,4 +126,36 @@ const githubLink = 'https://github.com/alys5'
 const fiverrLink = 'https://it.fiverr.com/alys_5'
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+.heading-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 1) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(255, 215, 0, 0) 50%
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 2s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>

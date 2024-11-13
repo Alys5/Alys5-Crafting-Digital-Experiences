@@ -1,26 +1,54 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MaintenancePage from '../view/MaintenancePage.vue'
-import HomePage from '../view/HomePage.vue'
+import Trans from '@/locales/translation'
+import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
+import ContactView from '../views/ContactView.vue'
+import ProjectsView from '../views/ProjectsView.vue'
+import MaintenanceView from '../views/MaintenanceView.vue'
+import ErrorView from '../views/ErrorView.vue'
 
-const isMaintenanceMode = true // Set to false to disable maintenance mode
+const createLocaleProps = (route) => ({ locale: route.params.locale })
 
 const routes = [
-  { path: '/', name: 'Home', component: HomePage },
-  { path: '/maintenance', name: 'Maintenance', component: MaintenancePage },
+  {
+    path: '/:locale?',
+    beforeEnter: Trans.routeMiddleware,
+    children: [
+      { path: '', name: 'home', component: HomeView, props: createLocaleProps },
+      { path: 'About', name: 'about', component: AboutView, props: createLocaleProps },
+      { path: 'Contact', name: 'contact', component: ContactView, props: createLocaleProps },
+      { path: 'Projects', name: 'projects', component: ProjectsView, props: createLocaleProps },
+      {
+        path: 'Maintenance',
+        name: 'Maintenance',
+        component: MaintenanceView,
+        props: createLocaleProps,
+        beforeEnter: (to, from, next) => {
+          if (import.meta.env.VITE_MAINTENANCE_MODE !== 'true') {
+            next({ name: 'home', params: to.params })
+          } else {
+            next()
+          }
+        },
+      },
+    ],
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    component: ErrorView,
+    beforeEnter: (to, from, next) => {
+      if (import.meta.env.VITE_MAINTENANCE_MODE !== 'true') {
+        next()
+      } else {
+        next({ name: 'Maintenance', params: to.params })
+      }
+    },
+  },
 ]
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+export default createRouter({
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
   routes,
+  strict: true,
 })
-
-// Redirect to maintenance page if maintenance mode is enabled and the current route is the home page
-router.beforeEach((to, from, next) => {
-  if (isMaintenanceMode && to.name === 'Home') {
-    next({ name: 'Maintenance' })
-  } else {
-    next()
-  }
-})
-
-export default router

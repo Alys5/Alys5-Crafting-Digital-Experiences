@@ -2,7 +2,7 @@
   <select
     v-model="internalValue"
     :class="[
-      'px-4 py-2 rounded-md-lg border border-neutral-DEFAULT text-sm bg-neutral-surface text-neutral-light focus:outline-none focus:ring-2 focus:ring-accent-dark font-heading-font',
+      'px-4 py-2 rounded-md-lg border border-neutral text-sm font-sans bg-neutral-surface text-neutral-light focus:outline-none focus:ring-2 focus:ring-primary.hover hover:glass-card hover:backdrop-blur-md hover:shadow-md-2',
       customClasses,
     ]"
     @change="handleChange"

@@ -1,12 +1,14 @@
 <template>
   <div class="flex items-center">
-    <label for="switch" class="mr-2">{{ label }}</label>
+    <label for="switch" class="mr-2 text-sm font-sans font-medium text-neutral-900">
+      {{ label }}
+    </label>
     <input
       id="switch"
       type="checkbox"
       :checked="value"
       @change="$emit('update:value', $event.target.checked)"
-      class="toggle-switch"
+      class="toggle-switch glass-card rounded-full p-1 transition-colors"
     />
   </div>
 </template>
@@ -23,9 +25,13 @@ export default {
 
 <style scoped>
 .toggle-switch {
-  @apply w-10 h-6 bg-gray-300 rounded-full cursor-pointer transition-colors;
+  width: 2.5rem;
+  height: 1.5rem;
 }
 .toggle-switch:checked {
-  @apply bg-blue-500;
+  background-color: var(--primary);
+}
+.toggle-switch:hover {
+  background-color: var(--primary-hover);
 }
 </style>

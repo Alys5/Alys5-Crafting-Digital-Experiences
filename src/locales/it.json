@@ -1,4 +1,8 @@
 {
+  "locale": {
+    "en": "Inglese",
+    "it": "Italiano"
+  },
   "maintenance": {
     "title": "Debugging in corso! 🛠️",
     "subtitle": "Ottimizzazione dell'Esperienza Utente...",
@@ -39,5 +43,11 @@
   },
   "footer": {
     "copy": " Alys5 © Creato con 💜 e tanto caffè"
+  },
+  "error": {
+    "title": "404 🔴",
+    "subtitle": "Pagina non trovata. Prova a tornare alla home.",
+    "alertTitle": "Houston, Abbiamo un Problema! 🚀",
+    "alertMessage": "Riavvia la home"
   }
 }

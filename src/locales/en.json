@@ -1,4 +1,8 @@
 {
+  "locale": {
+    "en": "English",
+    "it": "Italian"
+  },
   "maintenance": {
     "title": "Debugging in Progress! 🛠️",
     "subtitle": "Optimizing User Experience...",
@@ -39,5 +43,11 @@
   },
   "footer": {
     "copy": " Alys5 © Crafted with 💜 and many cups of coffee"
+  },
+  "error": {
+    "title": "404 🔴",
+    "subtitle": "Page not found. Try orbiting back to home.",
+    "alertTitle": "Houston, We Have a Problem! 🚀",
+    "alertMessage": "Reboot to home"
   }
 }

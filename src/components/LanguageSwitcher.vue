@@ -1,39 +1,48 @@
 <template>
-  <BaseSelect
-    v-model="selectedLang"
-    :options="languageOptions"
-    class="bg-neutral-surface text-neutral-light border-neutral-DEFAULT rounded-md-lg px-4 py-2 focus:ring-2 focus:ring-accent-dark focus:outline-none"
-    @update:modelValue="changeLanguage"
-  />
+  <div class="glass-card p-4">
+    <h2 class="heading-gradient text-2xl font-heading mb-4">Language</h2>
+    <BaseSelect
+      :model-value="locale"
+      :options="
+        supportedLocales.map((sLocale) => ({ value: sLocale, label: t(`locale.${sLocale}`) }))
+      "
+      @update:model-value="switchLanguage"
+      class="hover-glow"
+    />
+  </div>
 </template>
 
-<script setup>
-import { ref, watch } from 'vue'
-import BaseSelect from '@/components/Base/BaseSelect.vue'
+<script>
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import Tr from '@/locales/translation'
 
-const selectedLang = ref('en')
+export default {
+  setup() {
+    const { t, locale } = useI18n()
+    const router = useRouter()
+    const supportedLocales = Tr.supportedLocales
 
-// Define language options as an array of objects
-const languageOptions = [
-  { value: 'en', label: 'English' },
-  { value: 'it', label: 'Italiano' },
-  // Altre lingue possono essere aggiunte qui
-]
+    const switchLanguage = (newLocale) => {
+      Tr.switchLanguage(newLocale)
+      router.replace({ params: { locale: newLocale } })
+    }
 
-function changeLanguage() {
-  const { locale } = useI18n()
-  locale.value = selectedLang.value
+    return { t, locale, supportedLocales, switchLanguage }
+  },
+}
+</script>
+
+<style scoped>
+.glass-card {
+  @apply bg-neutral-card bg-opacity-70 backdrop-blur-md shadow-md-3 rounded-3xl;
 }
 
-// Verifico se la lingua e cambiata e cambio il file di lingua corrispondente
-watch(
-  () => selectedLang.value,
-  async (newLang) => {
-    const { locale } = useI18n()
-    const messages = await import(`./locales/${newLang}.json`)
-    locale.value = newLang
-    locale.messages.value = messages.default
-  },
-)
-</script>
+.heading-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-pink;
+}
+
+.hover-glow:hover {
+  @apply transition-shadow duration-200 ease-in-out shadow-lg shadow-accent-blue/50;
+}
+</style>
